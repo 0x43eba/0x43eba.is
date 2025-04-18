@@ -1,185 +1,86 @@
-:root {
-    --forest: #0f5d3c;
-    --forest-dark: #09442b;
-    --mint: #d6f0e0;
-    --sand: #fde0a4;
-    --canvas: #f7f9f5;
-    --ink: #111;
-}
-
-html,
-body {
-    height: 100%;
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
+    font-family: 'Share Tech Mono', monospace;
+    background-color: #0a0a0a;
+    color: #ddd;
     display: flex;
-    flex-direction: column;
-    font-family: 'Inter', sans-serif;
-    background: var(--canvas);
-    color: var(--ink);
-    line-height: 1.6;
-}
-
-.site-wrapper {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-}
-
-/* Typography */
-h1,
-h2,
-h3 {
-    font-family: 'DM Serif Display', serif;
-    margin: 0;
-    line-height: 1.15;
-}
-
-/* Hero */
-.hero {
-    background: linear-gradient(180deg, #e1f3e7 0%, var(--canvas) 100%);
-    text-align: center;
-    padding: 5.5rem 1.25rem 4rem;
-}
-
-.hero h1 {
-    font-size: clamp(2.4rem, 6vw, 3.4rem);
-    color: var(--forest-dark);
-    margin-bottom: .75rem;
-}
-
-.tagline {
-    font-size: 1.15rem;
-    max-width: 620px;
-    margin: 0 auto;
-    color: var(--forest-dark);
-}
-
-/* Cards */
-.cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-    max-width: 1100px;
-    margin: 3rem auto;
-    /* slightly less vertical margin */
-    padding: 0 1rem;
-    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: radial-gradient(#222 1px, transparent 1px);
+    background-size: 30px 30px;
 }
 
 .card {
-    padding: 2.1rem 1.7rem;
-    border-radius: 12px;
-    background: white;
+    background-color: #111;
+    border-radius: 1rem;
+    border: 1px solid #333;
+    padding: 3rem;
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.25);
+    width: 500px;
     text-align: center;
-    font-size: 1.125rem;
-    border: none;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.06);
-}
-
-.card-icon {
-    width: 64px;
-    height: auto;
-    display: block;
-    margin: 0 auto 1.1rem;
-}
-
-.card h2 {
-    font-size: 1.55rem;
-    font-weight: 600;
-    margin-bottom: .55rem;
-}
-
-.card p {
-    margin: 0;
-    font-size: 1.05rem;
-}
-
-.mint {
-    background: var(--mint);
-    color: var(--forest-dark);
-}
-
-.sand {
-    background: var(--sand);
-    color: var(--forest-dark);
-}
-
-.forest {
-    background: var(--forest);
-    color: #fff;
-}
-
-.forest h2 {
-    color: #fff;
-}
-
-/* CTA Footer */
-.cta {
     position: relative;
-    background: var(--forest);
-    color: #fff;
-    text-align: center;
-    padding: 2.5rem 1rem;
 }
 
-.cta h3 {
-    font-size: 2rem;
-    margin-bottom: 1.4rem;
-    font-weight: 600;
+.card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 2px solid #888;
+    margin-bottom: 1.5rem;
 }
 
-.btn {
-    display: inline-block;
-    padding: .9rem 2.2rem;
-    border: 2px solid #fff;
-    border-radius: 50px;
+.subtitle {
     font-size: 1rem;
-    font-weight: 500;
-    text-decoration: none;
+    letter-spacing: 2px;
+    color: #c770f0;
+    margin-bottom: 0.75rem;
+}
+
+h1 {
+    font-size: 2.2rem;
     color: #fff;
-    transition: background .25s, color .25s;
+    margin-bottom: 0.75rem;
 }
 
-.btn:hover {
-    background: #fff;
-    color: var(--forest);
+p {
+    font-size: 1.1rem;
+    color: #888;
+    margin-bottom: 2rem;
 }
 
-/* Fox Icon */
-.footer-icon {
-    position: absolute;
-    right: 1.5rem;
-    bottom: 100%;
-    transform: translateY(35%);
-    width: 84px;
-    height: auto;
-    pointer-events: none;
+.email-btn {
+    background: linear-gradient(90deg, #ff6a00, #b84dff);
+    border: none;
+    border-radius: 2rem;
+    padding: 0.8rem 1.6rem;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
-/* Responsive */
-@media(max-width:600px) {
-    .hero {
-        padding: 4.5rem 1rem 3.5rem;
-    }
+.icons {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
 
-    .cards {
-        gap: 1.5rem;
-    }
+.icons a {
+    color: #888;
+    font-size: 1.4rem;
+    text-decoration: none;
+    transition: color 0.2s;
+}
 
-    .card {
-        padding: 1.75rem 1.35rem;
-    }
-
-    .card-icon {
-        width: 56px;
-        margin-bottom: .9rem;
-    }
-
-    .footer-icon {
-        width: 64px;
-        right: 1rem;
-    }
+.icons a:hover {
+    color: #fff;
 }

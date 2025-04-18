@@ -2,7 +2,7 @@ default:
 	just -l
 
 run:
-	pnpm run dev
+	pnpm run start
 
 deploy:
 	fly deploy
