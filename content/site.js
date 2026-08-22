@@ -51,7 +51,7 @@ module.exports = {
     items: [
       {
         title: 'Resilient System Design',
-        body: 'How do you make sure an agentic system understands existing business processes and development processes?',
+        body: 'How do you make sure an agentic system understands existing business and development processes?',
       },
       {
         title: 'High-Performance Systems',

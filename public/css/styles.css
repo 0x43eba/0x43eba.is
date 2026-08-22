@@ -14,6 +14,8 @@
   --accent:      #34d67f;
   --accent-dim:  rgba(52, 214, 127, 0.14);
   --accent-wash: rgba(52, 214, 127, 0.05);
+  --contour:     rgba(236, 234, 230, 0.05);
+  --grain:       url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
 
   --serif: "Instrument Serif", "Iowan Old Style", Georgia, "Times New Roman", serif;
   --sans:  "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
@@ -34,6 +36,8 @@
     --accent:      #0b7a44;
     --accent-dim:  rgba(11, 122, 68, 0.1);
     --accent-wash: rgba(11, 122, 68, 0.035);
+    --contour:     rgba(23, 23, 26, 0.042);
+    --grain:       url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
   }
 }
 
@@ -60,16 +64,32 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-/* A barely-there wash so the page has a horizon rather than a flat field. */
+/* Two layers sit behind everything, both pure CSS — no image requests.
+   ::before is the wash plus a fine dither grain, which stops the dark
+   reading as flat paint. ::after is a field of hairline isolines, rotated
+   off-axis so it reads as a contour map rather than a ripple. */
 body::before {
   content: "";
   position: fixed;
   inset: 0;
   z-index: -1;
   pointer-events: none;
-  background:
+  background-image:
     radial-gradient(115% 65% at 50% -12%, var(--bg-veil) 0%, transparent 60%),
-    radial-gradient(55% 38% at 14% 2%, var(--accent-wash) 0%, transparent 70%);
+    radial-gradient(55% 38% at 14% 2%, var(--accent-wash) 0%, transparent 70%),
+    var(--grain);
+  background-size: auto, auto, 160px 160px;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: -25%;
+  z-index: -1;
+  pointer-events: none;
+  background-image: repeating-radial-gradient(ellipse 120% 70% at 22% 12%,
+    transparent 0 46px, var(--contour) 46px 47px);
+  transform: rotate(-7deg);
 }
 
 .page {
