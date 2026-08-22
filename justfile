@@ -6,3 +6,7 @@ run:
 
 deploy:
 	fly deploy
+
+# Regenerate the social preview card (needs: pip install Pillow)
+og:
+	python3 scripts/make-og.py

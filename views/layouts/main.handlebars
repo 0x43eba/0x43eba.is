@@ -1,40 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Russell Gill</title>
+  <title>{{site.meta.title}}</title>
 
-  <!-- Favicon -->
+  <meta name="color-scheme" content="dark light" />
+  <meta name="theme-color" content="{{site.meta.themeColor}}" />
   <link rel="icon" type="image/svg+xml" href="/images/favicon.svg" />
+  <link rel="canonical" href="{{site.meta.url}}" />
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet" />
 
   <!-- Styles -->
   <link rel="stylesheet" href="/css/styles.css" />
 
-  <!-- SEO Meta -->
-  <meta name="description" content="Russell Gill — Backend Developer based in Reykjavík, Iceland. Specializing in systems architecture, high-performance backend development, infrastructure, and integrations." />
-  <meta name="author" content="Russell Gill" />
-  <meta name="keywords" content="backend developer, systems architecture, infrastructure, integrations, high performance, software engineering, Reykjavík, Iceland" />
+  <!-- SEO -->
+  <meta name="description" content="{{site.meta.description}}" />
+  <meta name="author" content="{{site.meta.author}}" />
+  <meta name="keywords" content="{{site.meta.keywords}}" />
   <meta name="robots" content="index, follow" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Russell Gill — Backend Systems Developer in Iceland" />
-  <meta property="og:description" content="Experienced backend developer in Reykjavík, Iceland with a focus on systems architecture and infrastructure design." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="/images/avatar.png" />
-  <meta property="og:url" content="https://0x43eba.is" />
+  <meta property="og:site_name" content="{{site.meta.title}}" />
+  <meta property="og:title" content="{{site.meta.title}}" />
+  <meta property="og:description" content="{{site.meta.description}}" />
+  <meta property="og:url" content="{{site.meta.url}}" />
+  <meta property="og:image" content="{{site.meta.url}}{{site.meta.image}}" />
 
-  <!-- Twitter Card -->
+  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Russell Gill — Backend Systems Developer in Iceland" />
-  <meta name="twitter:description" content="Backend developer in Reykjavík, Iceland specializing in systems architecture, performance, and integration work." />
-  <meta name="twitter:image" content="/images/avatar.png" />
-  <meta name="twitter:url" content="https://0x43eba.is" />
+  <meta name="twitter:title" content="{{site.meta.title}}" />
+  <meta name="twitter:description" content="{{site.meta.description}}" />
+  <meta name="twitter:image" content="{{site.meta.url}}{{site.meta.image}}" />
 </head>
+
 <body>
   {{{body}}}
 </body>
+
 </html>
