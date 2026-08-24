@@ -78,6 +78,10 @@ module.exports = {
   // Shown as text links beside the email button. `external: true` adds
   // the ↗ mark and opens in a new tab.
   links: [
+    // TODO: swap this href for the public `.notion.site` URL once the Writing
+    // page is published to web (Notion → Share → Publish). The app.notion.com
+    // link below only works while signed in as the page owner.
+    { label: 'Writing', href: 'https://app.notion.com/p/3c6e8016a7fa81038e92f53fe4f64f59', external: true },
     { label: 'GitHub', href: 'https://github.com/0x43eba', external: true },
   ],
 
