@@ -67,7 +67,7 @@ module.exports = {
       },
       {
         title: 'Wetlab Processes',
-        body: ''
+        body: 'Can you grow crystals out of the chemical components of black pepper?'
       },
       {
         title: 'Smartcontracts',
