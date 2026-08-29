@@ -51,11 +51,11 @@ module.exports = {
     items: [
       {
         title: 'Resilient System Design',
-        body: 'How do you make sure an agentic system understands existing business and development processes?',
+        body: 'How do we make sure an agentic system understands existing business and development processes?',
       },
       {
         title: 'High-Performance Systems',
-        body: 'How do we store real-time orderbook data on a cryptocurrency exchange?',
+        body: 'Can we predict bid prices by out-performing the decentralized exchange\'s own intrest algorithm?',
       },
       {
         title: 'Physical Science',
@@ -65,6 +65,14 @@ module.exports = {
         title: '3D Design',
         body: 'How can we get a 3D capture of this audio installation?',
       },
+      {
+        title: 'Wetlab Processes',
+        body: ''
+      },
+      {
+        title: 'Smartcontracts',
+        body: 'Can we reverse engineer an entire exchange to simulate trade behavior with historic data?'
+      }
     ],
   },
 
