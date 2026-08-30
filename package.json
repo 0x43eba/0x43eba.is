@@ -2,16 +2,18 @@
   "name": "0x43eba",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/app.mjs",
   "scripts": {
-    "start": "node app.js"
+    "build": "cherry compile src/html.cljs src/site.cljs src/pages.cljs src/app.cljs",
+    "start": "node src/app.mjs",
+    "dev": "npm run build && npm run start"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "packageManager": "pnpm@10.7.1",
   "dependencies": {
-    "express": "^5.1.0",
-    "express-handlebars": "^8.0.2"
+    "cherry-cljs": "^0.6.38",
+    "express": "^5.1.0"
   }
 }
